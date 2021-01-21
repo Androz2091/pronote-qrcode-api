@@ -2,6 +2,8 @@ const fetch = require('node-fetch');
 
 const decipher = require('./decipher');
 const decodeQR = require('./decode-qr');
+const cookies = require('./cookies');
+const createUUID = require('./uuid');
 
 // Constante. Ne doit pas être changée tant que Pronote ne s'amuse pas à le faire.
 const URLMobileSiteInfo = `infoMobileApp.json?id=0D264427-EEFC-4810-A9E9-346942A862A4`;
@@ -24,4 +26,10 @@ fetchInfoMobileApp(qrCodeData).then((result) => {
     const token = decipher.decipherLogin(qrCodeData.jeton, decipher.getBuffer(tokenCode), decipher.getBuffer(''));
     console.log(login);
     console.log(token);
+
+    const generatedUUID = createUUID();
+    const cookie = generateCookie(generatedUUID);
+    console.log(cookie);
+
+    //fetch('https://0310047h.index-education.net/pronote/appelfonction/6/6513781/2251c83c89cf957d23445ec8e23f2e1b')
 })

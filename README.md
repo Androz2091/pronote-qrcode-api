@@ -37,4 +37,6 @@
 ```
 A noter : le paramètre ID (`0D264427-EEFC-4810-A9E9-346942A862A4`) est une constante et ne varie pas d'un établissement à l'autre.
 
-* Pronote demande le code d'accès rentré précédemment.
+* Pronote demande le code d'accès à 4 chiffres rentré précédemment par l'utilisateur (qu'on appelera `JETON_4_CHIFFRE`).
+
+Le login est toujours la même chaine de caractères pour un même compte, encodée avec le `JETON_4_CHIFFRE` passé lors de la création du QRCode. Le jeton est aussi encodé avec le `JETON_4_CHIFFRE`, mais il est différent pour chaque QRCode.
