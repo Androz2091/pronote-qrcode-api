@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+
+<head>
+  <title>Pronote.NET Mobile</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https: blob: * 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src *">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="stylesheet" href="lib/materialize/css/materialize.min.css" />
+  <link rel="stylesheet" href="Produit/Css/communMobile.css" />
+  <link rel="stylesheet" href="Produit/Css/pn-theme.css" />
+  <link rel="stylesheet" href="Produit/Css/themeMobile.css" />
+  <link rel="stylesheet" href="Produit/Css/pronoteApp.css" />
+  <link rel="stylesheet" href="Produit/Css/fonts/1/2/fonts.css" />
+
+  <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/kjua.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/es6-promise.auto.min.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/ObjetTraductions.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ObjetCommMessage.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/InterfaceAccueil.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/InterfaceProfil.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/InterfaceParametres.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/InterfaceAide.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/InterfaceMenuOnglet.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ObjetApplication.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+</head>
+
+<body class="ThemeMobilePN" style="margin:0;padding:0;" onload="document.addEventListener('deviceready', start, true);">
+  <div id="idPageApp">
+    <div id="idMenuOnglets" class="sidenav aside-nav-right"></div>
+    <nav>
+      <div class="nav-wrapper">
+        <div>
+          <div>
+            <div class="EspaceIcone">&nbsp;</div>
+            <div id="idTitre" class=""></div>
+            <div style="height:100%;"></div>
+          </div>
+        </div>
+        <ul class="">
+          <li id="idBoutonValider" style="display:none;">
+            <a>
+              <i class="material-icons icon_ok"></i>
+            </a>
+          </li>
+          <!-- <li id="idBoutonAccueil" style="display:none;" onclick="GApplication.chargerInterface(GApplication.interfaces.accueil);">
+            <a>
+              <i class="material-icons icon_home"></i>
+            </a>
+          </li> -->
+          <li id="idBoutonMenuOnglets" data-target="idMenuOnglets" class="sidenav-trigger" style="display:none;">
+            <a role="button" aria-label="menu">
+              <i class="material-icons icon_reorder"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="idContent">
+    </div>
+  </div>
+  <div id="idPopup" class="modal modal-popup">
+    <div class="modal-close ui-icon-delete" style="display:none;"></div>
+    <div class="modal-header" style="display:none;"></div>
+    <div class="modal-content"></div>
+    <div class="modal-footer" style="display:none;"></div>
+  </div>
+  <div id="idPreloader" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:10000;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color: rgba(0,0,0,0.3);"></div>
+    <div class="" style="overflow:hidden;position:absolute;top:calc(50% - 32px);left:calc(50% - 32px);">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="idPreloaderText" style="overflow:hidden;position:absolute;top:calc(50% + 64px + 5px);left:0;width:100%;text-align:center;color:#21874a;"></div>
+  </div>
+</body>
+
+</html>

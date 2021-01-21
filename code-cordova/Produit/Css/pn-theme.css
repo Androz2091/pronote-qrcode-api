@@ -1,0 +1,110 @@
+﻿/*
+ * GENERATION FICHIER par node-sass
+ * => .\scss\pn-theme.scss
+ *
+ * !!! Ne pas modifier ce fichier !!!
+ */
+/**/ .IconeRetourEspace {
+/**/   background-image: url(../../../images/mobile/version_classique_PN_32.png);
+/**/   width: 32px;
+/**/   height: 32px;
+/**/   display: inline-block;
+/**/   background-repeat: no-repeat;
+/**/   margin-right: 5px;
+/**/   padding-top: 3px;
+/**/ }
+/**/
+/**/ .photoEspaceEnseignant, .photoEspaceVS, .photoEspaceEtudiant, .photoEspaceParent, .photoEspaceDirection {
+/**/   background-repeat: no-repeat;
+/**/   background-position: center center;
+/**/ }
+/**/
+/**/ .photoEspaceEnseignant {
+/**/   background-image: url(../../../images/mobile/icones-espace-enseignant-PN.png);
+/**/ }
+/**/
+/**/ .photoEspaceVS {
+/**/   background-image: url(../../../images/mobile/icones-espace-vs-PN.png);
+/**/ }
+/**/
+/**/ .photoEspaceEtudiant {
+/**/   background-image: url(../../../images/mobile/icones-espace-etudiant-PN.png);
+/**/ }
+/**/
+/**/ .photoEspaceParent {
+/**/   background-image: url(../../../images/mobile/icones-espace-parents-PN.png);
+/**/ }
+/**/
+/**/ .photoEspaceDirection {
+/**/   background-image: url(../../../images/mobile/icones-espace-vs-PN.png);
+/**/ }
+/**/
+/**/ .iconLogin {
+/**/   background-image: url(../../../images/mobile/icone-login-id-PN.png);
+/**/   width: 24px;
+/**/   height: 24px;
+/**/   display: inline-block;
+/**/   background-repeat: no-repeat;
+/**/ }
+/**/
+/**/ .iconPwd {
+/**/   background-image: url(../../../images/mobile/icone-login-mdp-PN.png);
+/**/   width: 24px;
+/**/   height: 24px;
+/**/   display: inline-block;
+/**/   background-repeat: no-repeat;
+/**/ }
+/**/
+/**/ .messagerieNouveauMessage {
+/**/   background-image: url(../../../images/mobile/MessagerieNouveauMessage.png);
+/**/   background-repeat: no-repeat;
+/**/   background-position: center center;
+/**/ }
+/**/
+/**/ .widgetCommunicationMobile .collection-item {
+/**/   background-color: #FFFFFF;
+/**/   color: #343434;
+/**/
+/**/   padding: 0px;
+/**/   border: none;
+/**/   box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+/**/ }
+/**/
+/**/ .widgetCommunicationMobile .collection-item {
+/**/   margin: 20px 10px 15px 5px;
+/**/   padding: 10px !important;
+/**/   border-radius: 20px;
+/**/ }
+/**/
+/**/ .widgetCommunicationMobile .collection-item > span {
+/**/   position: absolute;
+/**/   right: -0.5em;
+/**/   top: -1em;
+/**/   width: 30px;
+/**/   height: 30px;
+/**/   border-radius: 100%;
+/**/   text-align: center;
+/**/ }
+/**/
+/**/ .widgetCommunicationMobile .collection-item > span > i {
+/**/   font-size: 13px;
+/**/   color: #ffffff;
+/**/   top: 4px;
+/**/ }
+/**/
+/**/ .widgetCommunicationMobile .collection-item > span > img {
+/**/   position: absolute;
+/**/   top: 4px;
+/**/   width: 20px;
+/**/   height: 20px;
+/**/ }
+/**/
+/**/ .widgetCommunicationMobile .collection-item > span {
+/**/   background-color: #21874a;
+/**/ }
+/*
+ * GENERATION FICHIER par node-sass
+ * => .\scss\pn-theme.scss
+ *
+ * !!! Ne pas modifier ce fichier !!!
+ */

@@ -1,0 +1,95 @@
+﻿html {
+    background-color: #ffffff;
+}
+
+body * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+.selectBlock,
+textarea,
+input {
+    -webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: element;
+    user-select: all;
+}
+
+.EspaceIcone {
+    background-image: url(../../images/mobile/ldpi.png);
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+    margin: 0.1em 0.3em;
+    background-repeat: no-repeat;
+}
+
+fieldset {
+    border: #3b8709 1px solid;
+    padding: 5px;
+}
+
+.ui-loader,
+.ui-loader-verbose {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 0;
+    left: 0;
+}
+
+.ui-loader .ui-icon-loading,
+.ui-loader-verbose .ui-icon-loading {
+    background: url(../../images/attendre.gif) no-repeat center center !important;
+    background-size: 2.875em 2.875em;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+    margin: -1.4375em 0 0 -1.4375em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.ui-loader-verbose h1 {
+    position: absolute;
+    top: calc(50% + 2.875em);
+    width: 100%;
+}
+
+.sidenav.aside-nav-right .btn-commands-container .toggler-btn > i.material-icons {
+  width: 26px;
+  font-size: 0;
+}
+
+.sidenav.aside-nav-right .btn-commands-container .toggler-btn > i.material-icons:before {
+  font-size: 24px;
+}
+
+.sidenav.aside-nav-right .btn-commands-container .cta-mobile-conteneur {
+  margin-bottom: 0;
+}
+
+.sidenav.aside-nav-right .global-menu-container .menu-container .collection.menu-liste > li {
+  justify-content: start;
+}
+
+nav .sidenav-trigger {
+  margin: 0 10px;
+}
+
+.btn-commands-container .toggler-btn {
+  width: 26px;
+}
