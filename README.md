@@ -2,6 +2,8 @@
 
 ## Fonctionnement
 
+### Contenu du QR Code
+
 * QRCode scanné. Ce QRCode renvoie un JSON contenant plusieurs informations:
 ```js
 {
@@ -11,7 +13,15 @@
 }
 ```
 
-* A partir de l'URL Pronote trouvée ci-dessus, on peut effectuer un appel vers cette URL:
+### Décoder le contenu du QR Code
+
+* Pronote demande le code d'accès à 4 chiffres rentré précédemment par l'utilisateur (qu'on appelera `JETON_4_CHIFFRE`).
+
+Le login est toujours la même chaine de caractères pour un même compte, encodée avec le `JETON_4_CHIFFRE` passé lors de la création du QRCode. Le jeton est aussi encodé avec le `JETON_4_CHIFFRE`, mais il est différent pour chaque QRCode.
+
+### URL Mobile App Info
+
+* A partir de l'URL Pronote (obtenue depuis le QR Code) on peut effectuer un appel vers cette URL:
 ```js
 // https://0310047h.index-education.net/pronote/infoMobileApp.json?id=0D264427-EEFC-4810-A9E9-346942A862A4
 
@@ -37,6 +47,10 @@
 ```
 A noter : le paramètre ID (`0D264427-EEFC-4810-A9E9-346942A862A4`) est une constante et ne varie pas d'un établissement à l'autre.
 
-* Pronote demande le code d'accès à 4 chiffres rentré précédemment par l'utilisateur (qu'on appelera `JETON_4_CHIFFRE`).
+### Obtenir un MDP
 
-Le login est toujours la même chaine de caractères pour un même compte, encodée avec le `JETON_4_CHIFFRE` passé lors de la création du QRCode. Le jeton est aussi encodé avec le `JETON_4_CHIFFRE`, mais il est différent pour chaque QRCode.
+Obtenir un MDP à partir d'un login, d'un jeton encodé et d'un `JETON_4_CHIFFRE`
+
+* Se rendre sur la page `https://0840853w.index-education.net/pronote/eleve.html`
+* Exécuter le code qui change la fonction `window.hookAccesDepuisAppli`
+* Le contenu se trouve dans 
