@@ -31,3 +31,14 @@ module.exports.getLocationAssignment = (serverURL) => {
         location.assign("${serverURL}/mobile.eleve.html?fd=1");
     `;
 };
+
+module.exports.what = (login, generatedUUID, jeton, codeJeton) => {
+    return `
+        (function(){
+            window.hookAccesDepuisAppli = function(){
+                this.passerEnModeValidationAppliMobile('${login}', '${generatedUUID}', '${jeton}', '${codeJeton}');
+            };
+            return '';
+        })()
+    `;
+}

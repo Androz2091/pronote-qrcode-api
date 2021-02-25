@@ -28,8 +28,9 @@ fetchInfoMobileApp(qrCodeData).then((result) => {
     console.log(token);
 
     const generatedUUID = createUUID();
-    const cookie = generateCookie(generatedUUID);
+    const cookie = cookies.generateCookie(generatedUUID);
     console.log(cookie);
+    console.log(cookies.what(qrCodeData.login, generatedUUID, qrCodeData.jeton, tokenCode))
 
     //fetch('https://0310047h.index-education.net/pronote/appelfonction/6/6513781/2251c83c89cf957d23445ec8e23f2e1b')
 })

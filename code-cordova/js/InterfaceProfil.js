@@ -202,8 +202,11 @@ InterfaceProfil.prototype.changeURL = function () {
 
 
 /**
-     * Recupération des informations sur le .Net sur l'URL fournie
-     */
+ * Recupération des informations sur le .Net sur l'URL fournie
+ * 
+ * @param {string} aUrl Correspond au json du qr code (.url)
+ * @param {object} aInfoSupp Objet complet du qr code
+ */
 InterfaceProfil.prototype.validerURL = function (aUrl, aInfoSupp) {
   var eBro = null,
       lThis = this,
@@ -302,10 +305,12 @@ InterfaceProfil.prototype.validerURL = function (aUrl, aInfoSupp) {
 };
 
 /**
-     * Traitement des infos reçues
-     *
-     * @param aJSON (description)
-     */
+ * Traitement des infos reçues
+ * 
+ * @param {*} aUrl
+ * @param {*} aInfoSupp 
+ * @param {object} aJSON Le JSON renvoyé sur infoMobileApp.json
+ */
 InterfaceProfil.prototype.surInfoMobile = function (aUrl, aInfoSupp, aJSON) {
   var lSelf = this;
   GApplication.log(GApplication.niveauxLog.TRACE, 'surInfoMobile()');
@@ -441,8 +446,12 @@ InterfaceProfil.prototype.setListeEtab = function (aLat, aLong) {
 };
 
 /**
-     * (description)
-     */
+ * (description)
+ * 
+ * @param {string} aNomEsp Nom de l'espace (x)
+ * @param {string} aUrlEsp URL de l'espace (url/mobile.x.html)
+ * @param {string} code Le code du QR Code (à 4 chiffres)
+ */
 InterfaceProfil.prototype.profilRemplit = function (aNomEsp, aUrlEsp, aCode) {
   GApplication.log(GApplication.niveauxLog.TRACE, 'profilRempli()');
   this.profilCourant.serverUrl = $('#idInputURL').val();
@@ -450,6 +459,7 @@ InterfaceProfil.prototype.profilRemplit = function (aNomEsp, aUrlEsp, aCode) {
   this.profilCourant.nomEsp = aNomEsp;
   this.profilCourant.codeJeton = aCode;
   if (!this.profilCourant.codeJeton && this.profilCourant.estCAS && !this.profilCourant.bypassCAS) {
+    // normalement c'est le cas le plus courant
     this.validerProfilCAS();
   } else {
     this.validerProfil(this.profilCourant.bypassCAS || !!this.profilCourant.codeJeton);
@@ -661,9 +671,11 @@ InterfaceProfil.prototype.validerProfilCAS = function () {
       eBro.executeScript({
         code: '(function(){return JSON.stringify(location);})();'
       }, function (aData) {
+        // {"ancestorOrigins":{},"href":"https://cas.mon-ent-occitanie.fr/login?service=https:%2F%2F0310047H.index-education.net%2Fpronote%2Fmobile.eleve.html%3Ffd=1","origin":"https://cas.mon-ent-occitanie.fr","protocol":"https:","host":"cas.mon-ent-occitanie.fr","hostname":"cas.mon-ent-occitanie.fr","port":"","pathname":"/login","search":"?service=https:%2F%2F0310047H.index-education.net%2Fpronote%2Fmobile.eleve.html%3Ffd=1","hash":""}
         if (aData && aData[0] && aData[0].length) {
           aData[0] = JSON.parse(aData[0]);
         }
+        // Si on est encore sur l'appMobileInfo
         if (aData && aData[0] && aData[0].href.toLowerCase().indexOf(lThis.profilCourant.serverUrl.toLowerCase() + GApplication.urlInfoMobile.toLowerCase()) === 0) {
           // _surChargementInfoMobile ne nous a pas redirigé
           GApplication.fermerLoader();
@@ -970,8 +982,10 @@ InterfaceProfil.prototype.getPosition = function () {
 };
 
 /**
-     * vérifier une url
-     */
+ * vérifier une url
+ * 
+ * @param {string} aUrl Une URL de serveur Pronote
+ */
 InterfaceProfil.prototype.estUrlValide = function (aUrl) {
   var lParser = document.createElement('a'),
       lParserPath, lEspace = false,
