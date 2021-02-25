@@ -1,5 +1,34 @@
 # Pronote QR Code API
 
+## Objectif
+
+L'idéal serait de pouvoir faire quelque chose comme ça :
+
+```js
+const pronote = require('pronote-api');
+const qrcode = require('pronote-qrcode-api');
+
+qrcode.login(buffer, code).then((data) => { // buffer est l'image du qrcode, code est le JETON_4_CHIFFRE
+
+  // data contient le sessionID, etc. les paramètres listés ici : https://github.com/Litarvan/pronote-api/blob/master/src/session.js#L28
+
+  const session = new pronote.Session(data); 
+
+  session.homeworks(); // par exemple
+
+})
+```
+
+mais en réalité ça ne sera pas extactement comme ça (le login renverra un login et un mdp avec lesquels on se connectera)
+
+## Lancement
+
+Lancer le script qui extrait quelques infos
+
+```js
+node index.js --input qrcode.png --code 1111
+```
+
 ## Fonctionnement
 
 ### Contenu du QR Code
