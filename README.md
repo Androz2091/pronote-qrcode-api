@@ -1,5 +1,7 @@
 # Pronote QR Code API
 
+Cette API n'est absolument pas terminée, nous sommes deux ou trois à avancer dessus de temps en temps pour comprendre comment l'API Qrcode de pronote fonctionne pour arriver à l'utiliser dans d'autres applications non officielles. Ce repo permet de partager les résultats
+
 ## Objectif
 
 L'idéal serait de pouvoir faire quelque chose comme ça :
